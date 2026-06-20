@@ -7,8 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Adam El Khalifi — Biotechnologist & Software",
-    template: "%s — Adam El Khalifi",
+    default: "Adam El Khalifi · Biotechnologist & Software",
+    template: "%s · Adam El Khalifi",
   },
   description:
     "Biotechnologist bridging molecular wet-lab research and computational data architecture. Building Tech-Bio tools and Biomatch, a scientific credibility platform.",

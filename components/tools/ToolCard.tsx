@@ -2,13 +2,15 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { ToolMeta } from "./ToolMeta";
+import { cn } from "@/lib/cn";
 import type { Tool } from "@/lib/tools";
 
 type ToolCardProps = {
   tool: Tool;
+  className?: string;
 };
 
-export function ToolCard({ tool }: ToolCardProps) {
+export function ToolCard({ tool, className }: ToolCardProps) {
   const badgeVariant = tool.featured
     ? "featured"
     : tool.status === "live"
@@ -22,7 +24,7 @@ export function ToolCard({ tool }: ToolCardProps) {
       : "IN PROGRESS";
 
   return (
-    <Card interactive className="flex h-full flex-col gap-5">
+    <Card interactive className={cn("flex h-full flex-col gap-5", className)}>
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-xl font-medium text-ink">{tool.name}</h3>
         <Badge variant={badgeVariant}>{badgeLabel}</Badge>

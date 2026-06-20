@@ -18,10 +18,8 @@ export function NavLink({ href, children }: NavLinkProps) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "text-sm transition-colors duration-200 focus-visible:outline focus-visible:outline-1 focus-visible:outline-ink",
-        active
-          ? "border-b border-ink text-ink"
-          : "text-ink-muted hover:text-ink",
+        "text-[13px] transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-2",
+        active ? "font-medium text-ink" : "font-normal text-ink-muted hover:text-ink",
       )}
     >
       {children}

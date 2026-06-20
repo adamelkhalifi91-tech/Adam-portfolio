@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 /*
-  Blocked design tokens — brutalist minimalism, light-only.
+  Blocked design tokens — Apple Store aesthetic, light-only.
   Palette and elevation are intentionally locked. Do not add brand
-  colors, gradients, glassmorphism or extra shadows.
+  colors, gradients, glassmorphism or coloured shadows. Structure
+  comes from the 1px line and generous air, not from shadows.
 */
 @theme {
-  --color-paper: #fafafa;
-  --color-ink: #0a0a0a;
-  --color-ink-muted: #525252;
-  --color-ink-subtle: #a3a3a3;
-  --color-ink-inverse: #fafafa;
-  --color-line: #e5e5e5;
+  --color-paper: #fbfbfd;
+  --color-ink: #1d1d1f;
+  --color-ink-muted: #515154;
+  --color-ink-subtle: #86868b;
+  --color-ink-inverse: #ffffff;
+  --color-line: #d2d2d7;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --shadow-card: 0 1px 2px 0 rgba(10, 10, 10, 0.04);
-  --shadow-card-hover: 0 4px 16px -2px rgba(10, 10, 10, 0.06);
+  --shadow-soft: 0 1px 3px 0 rgba(29, 29, 31, 0.06);
+  --shadow-soft-hover: 0 8px 24px -4px rgba(29, 29, 31, 0.08);
 }
 
 html {
@@ -25,14 +26,14 @@ html {
 }
 
 body {
-  background: #fafafa;
-  color: #0a0a0a;
+  background: #fbfbfd;
+  color: #1d1d1f;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #0a0a0a;
-  color: #fafafa;
+  background: #1d1d1f;
+  color: #ffffff;
 }

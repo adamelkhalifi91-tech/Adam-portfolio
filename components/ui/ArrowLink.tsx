@@ -11,7 +11,7 @@ type ArrowLinkProps = {
 
 export function ArrowLink({ href, children, external, className }: ArrowLinkProps) {
   const classes = cn(
-    "group inline-flex items-center gap-1 text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-1 focus-visible:outline-ink",
+    "group inline-flex items-center gap-1 font-medium text-ink transition-colors duration-200 hover:text-ink/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-2",
     className,
   );
 

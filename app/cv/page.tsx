@@ -11,7 +11,7 @@ import { Languages } from "@/components/cv/Languages";
 export const metadata: Metadata = {
   title: "CV",
   description:
-    "Curriculum vitae of Adam El Khalifi Tagzouti — biotechnologist (BSc), wet-lab and computational, graduating May 2026.",
+    "Curriculum vitae of Adam El Khalifi Tagzouti, biotechnologist (BSc), wet-lab and computational, graduating May 2026.",
 };
 
 export default function CvPage() {

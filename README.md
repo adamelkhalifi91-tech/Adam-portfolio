@@ -1,12 +1,15 @@
-# Adam El Khalifi — Portfolio
+# Adam El Khalifi · Portfolio
 
 Personal portfolio and tools hub for Adam El Khalifi Tagzouti, a biotechnologist
 with a hybrid wet-lab / computational (Tech-Bio) profile. The site fuses a CV
-with a hub of interactive scientific tools — including the Biomatch platform and
+with a hub of interactive scientific tools, including the Biomatch platform and
 the open-source Tech-Bio suite.
 
-Four routes: `/` (landing), `/cv`, `/tools`, `/about`. Light-only, brutalist
-minimalism with a locked palette and Geist typography.
+Four routes: `/` (landing), `/cv`, `/tools`, `/about`. Light-only, Apple Store
+aesthetic with a protagonist hero, a locked palette and Geist typography.
+
+The visible copy intentionally avoids the em dash (a common AI-text tell);
+pauses use commas, periods, parentheses, or the interpunct.
 
 ## Stack
 

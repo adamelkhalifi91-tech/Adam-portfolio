@@ -11,7 +11,7 @@ function SkillList({ title, items }: { title: string; items: string[] }) {
         {items.map((item) => (
           <li
             key={item}
-            className="rounded border border-line px-2 py-0.5 text-sm text-ink-muted"
+            className="rounded-md border border-line px-3 py-1 text-sm text-ink-muted"
           >
             {item}
           </li>

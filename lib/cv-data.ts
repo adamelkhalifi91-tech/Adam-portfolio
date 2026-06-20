@@ -49,27 +49,27 @@ export const cvData: CvData = {
     name: "Adam El Khalifi Tagzouti",
     headline: "Biotechnologist · Wet-Lab & Computational (Tech-Bio)",
     subhead:
-      "Biotechnologist with a hybrid profile bridging molecular wet-lab research and computational data architecture. Experienced in molecular workflows — DNA extraction, PCR amplification, sequence analysis — across international laboratory settings. Builds independent Tech-Bio platforms that combine weighted algorithms and biometrics to validate scientific data. Seeking to transition applied molecular research into scalable therapeutic and industrial bioprocesses.",
+      "Biotechnologist with a hybrid profile bridging molecular wet-lab research and computational data architecture. Experienced in molecular workflows: DNA extraction, PCR amplification, sequence analysis, across international laboratory settings. Builds independent Tech-Bio platforms that combine weighted algorithms and biometrics to validate scientific data. Seeking to transition applied molecular research into scalable therapeutic and industrial bioprocesses.",
     location: "Canary Islands, Spain",
     email: "adamelkhalifi91@gmail.com",
     linkedin: null, // TODO: add LinkedIn URL once available
     github: null, // TODO: add GitHub URL once available
   },
   logistics: {
-    citizenship: "EU citizen (Spain) — no visa sponsorship required",
-    mobility: "Immediately relocatable across Europe",
-    workingLanguage: "English",
+    citizenship: "EU citizen (Spain). No visa sponsorship required.",
+    mobility: "Immediately relocatable across Europe.",
+    workingLanguage: "English.",
   },
   education: [
     {
       degree: "BSc in Biotechnology (240 ECTS)",
       institution: "Universidad Miguel Hernández de Elche (UMH)",
       location: "Spain",
-      period: "2022 – 2026",
+      period: "2022 to 2026",
       status: "Graduating May 2026",
       highlights: [
-        "Academic Excellence Track (ARA) — laboratory sessions, technical reporting and scientific seminars conducted exclusively in English.",
-        "International Research Stay (6 months) — Universidad Autónoma de Baja California (UABC), Mexico (Sep 2025 – Mar 2026).",
+        "Academic Excellence Track (ARA). Laboratory sessions, technical reporting and scientific seminars conducted exclusively in English.",
+        "International Research Stay (6 months) at Universidad Autónoma de Baja California (UABC), Mexico (Sep 2025 to Mar 2026).",
       ],
     },
   ],
@@ -78,7 +78,7 @@ export const cvData: CvData = {
       title: "Undergraduate Research Project (Final Degree Project)",
       institution: "Universidad Autónoma de Baja California (UABC)",
       location: "Mexico",
-      period: "Sep 2025 – Mar 2026",
+      period: "Sep 2025 to Mar 2026",
       bullets: [
         "Isolated and molecularly identified Bacillus cereus strains from complex matrices (heavy-metal mining waste), combining environmental microbiology with molecular identification techniques.",
         "Performed cell culture, analytical extraction and sample preparation under research-laboratory conditions.",
@@ -93,7 +93,7 @@ export const cvData: CvData = {
       "DNA/RNA extraction",
       "PCR / qPCR",
       "Molecular cloning",
-      "Microbial isolation & molecular identification",
+      "Microbial isolation and molecular identification",
       "Microbial culturing",
       "Strain isolation",
       "Cell culture",
@@ -119,7 +119,7 @@ export const cvData: CvData = {
       "SEO",
       "Product strategy",
       "Monetization",
-      "Scientific communication & outreach",
+      "Scientific communication and outreach",
     ],
   },
   languages: [

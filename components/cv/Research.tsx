@@ -24,9 +24,10 @@ export function Research() {
                   key={bullet}
                   className="flex gap-3 text-sm leading-relaxed text-ink-muted"
                 >
-                  <span aria-hidden className="select-none text-ink-subtle">
-                    —
-                  </span>
+                  <span
+                    aria-hidden
+                    className="mt-2 size-1 shrink-0 rounded-full bg-ink-subtle"
+                  />
                   <span>{bullet}</span>
                 </li>
               ))}

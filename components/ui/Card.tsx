@@ -16,9 +16,10 @@ export function Card({
   return (
     <div
       className={cn(
-        "border border-line bg-paper shadow-card",
-        padding === "lg" ? "p-8" : "p-6",
-        interactive && "transition-shadow duration-200 hover:shadow-card-hover",
+        "rounded-2xl border border-line bg-paper",
+        padding === "lg" ? "p-10" : "p-8",
+        interactive &&
+          "transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft-hover",
         className,
       )}
     >

@@ -7,16 +7,16 @@ type SectionProps = {
 
 export function Section({ eyebrow, title, children, id }: SectionProps) {
   return (
-    <section id={id} className="space-y-8">
+    <section id={id}>
       {(eyebrow || title) && (
-        <header className="space-y-3">
+        <header className="mb-12">
           {eyebrow && (
-            <p className="font-mono text-xs uppercase tracking-widest text-ink-subtle">
+            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-ink-subtle">
               {eyebrow}
             </p>
           )}
           {title && (
-            <h2 className="text-3xl font-medium tracking-tight text-ink md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-5xl">
               {title}
             </h2>
           )}

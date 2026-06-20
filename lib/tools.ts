@@ -18,7 +18,7 @@ export const tools: Tool[] = [
     name: "Biomatch",
     oneLiner: "A digital trust standard for scientific credibility.",
     description:
-      "Talent Passport — a web platform that audits scientific credibility through a weighted scoring algorithm (60/40 across scientific accuracy, narrative synthesis and risk handling) and real-time integrity checks using MediaPipe FaceMesh computer vision.",
+      "Talent Passport. A web platform that audits scientific credibility through a weighted scoring algorithm (60/40 across scientific accuracy, narrative synthesis and risk handling) and real-time integrity checks using MediaPipe FaceMesh computer vision.",
     stack: ["Next.js", "React", "Tailwind CSS", "MediaPipe", "Computer Vision"],
     status: "in_progress",
     featured: true,
