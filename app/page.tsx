@@ -1,65 +1,92 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Container } from "@/components/layout/Container";
+import { Section } from "@/components/layout/Section";
+import { ToolCard } from "@/components/tools/ToolCard";
+import { ArrowLink } from "@/components/ui/ArrowLink";
+import { cn } from "@/lib/cn";
+import { heroCopy } from "@/content/hero";
+import { tools } from "@/lib/tools";
 
-export default function Home() {
+function HeroCta({
+  href,
+  label,
+  primary,
+}: {
+  href: string;
+  label: string;
+  primary?: boolean;
+}) {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <Link
+      href={href}
+      className={cn(
+        "group inline-flex items-center gap-1.5 rounded border px-4 py-2 text-sm transition-colors duration-200 focus-visible:outline focus-visible:outline-1 focus-visible:outline-ink",
+        primary
+          ? "border-ink bg-ink text-ink-inverse hover:bg-paper hover:text-ink"
+          : "border-line text-ink hover:border-ink",
+      )}
+    >
+      {label}
+      <ArrowUpRight
+        strokeWidth={1.5}
+        className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+      />
+    </Link>
+  );
+}
+
+export default function HomePage() {
+  const featured = tools.filter((tool) => tool.featured);
+  const rest = tools.filter((tool) => !tool.featured);
+  const showcase = [...featured, ...rest].slice(0, 3);
+
+  return (
+    <main>
+      <Container className="space-y-24 py-20 md:space-y-32 md:py-28">
+        <section className="space-y-8">
+          <h1 className="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight text-ink md:text-7xl">
+            {heroCopy.h1}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-prose text-base leading-relaxed text-ink-muted">
+            {heroCopy.subtitle}
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+          <div className="flex flex-wrap items-center gap-3">
+            <HeroCta
+              href={heroCopy.primaryCta.href}
+              label={heroCopy.primaryCta.label}
+              primary
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <HeroCta
+              href={heroCopy.secondaryCta.href}
+              label={heroCopy.secondaryCta.label}
+            />
+          </div>
+        </section>
+
+        <Section eyebrow={heroCopy.approachEyebrow} title="How I work">
+          <p className="max-w-prose text-base leading-relaxed text-ink-muted">
+            {heroCopy.approachBody}
+          </p>
+        </Section>
+
+        <Section eyebrow="Work" title="Selected tools">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {showcase.map((tool) => (
+              <ToolCard key={tool.slug} tool={tool} />
+            ))}
+          </div>
+          <p className="pt-2 text-sm">
+            <ArrowLink href="/tools">See all tools</ArrowLink>
+          </p>
+        </Section>
+
+        <section className="border-t border-line pt-10">
+          <p className="max-w-prose text-xl font-medium tracking-tight text-ink md:text-2xl">
+            {heroCopy.closingLine}
+          </p>
+        </section>
+      </Container>
+    </main>
   );
 }
