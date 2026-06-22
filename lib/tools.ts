@@ -32,9 +32,9 @@ export const tools: Tool[] = [
     description:
       "A privacy-first tool to analyze biological sequences. Computes composition, GC content, melting temperature, translation across the six reading frames, ORF detection, and a full protein property profile (MW, pI, GRAVY, ε280, net charge).",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    status: "in_progress",
-    demoUrl: null, // TODO
-    repoUrl: null, // TODO
+    status: "live",
+    demoUrl: "https://sequence-analyzer.vercel.app/",
+    repoUrl: "https://github.com/adamelkhalifi91-tech/sequence-analyzer",
   },
   {
     slug: "primer-designer",
@@ -43,9 +43,9 @@ export const tools: Tool[] = [
     description:
       "Generates, filters and scores PCR primer pairs over a target sequence using SantaLucia 1998 thermodynamics, GC clamp checks, hairpin and dimer detection. Honest about its scope: for critical experiments, validate with Primer3 or PrimerBLAST.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    status: "in_progress",
-    demoUrl: null, // TODO
-    repoUrl: null, // TODO
+    status: "live",
+    demoUrl: "https://primer-designer.vercel.app/",
+    repoUrl: "https://github.com/adamelkhalifi91-tech/primer-designer", 
   },
   {
     slug: "msms-viewer",
@@ -54,8 +54,8 @@ export const tools: Tool[] = [
     description:
       "Loads .mgf, .mzML, JSON and CSV spectra, visualizes them interactively with Plotly, calculates mass differences against a neutral-loss table, and matches theoretical b/y ions against a user-provided peptide sequence.",
     stack: ["Next.js", "TypeScript", "Plotly.js"],
-    status: "in_progress",
-    demoUrl: null, // TODO
-    repoUrl: null, // TODO
+    status: "live",
+    demoUrl: "https://msms-viewer.vercel.app/",
+    repoUrl: "https://github.com/adamelkhalifi91-tech/msms-viewer",
   },
 ];
