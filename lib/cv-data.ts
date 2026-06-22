@@ -69,7 +69,7 @@ export const cvData: CvData = {
       status: "Graduating May 2026",
       highlights: [
         "Academic Excellence Track (ARA). Laboratory sessions, technical reporting and scientific seminars conducted exclusively in English.",
-        "International Research Stay (6 months) at Universidad Autónoma de Baja California (UABC), Mexico (Sep 2025 to Mar 2026).",
+        "International Research Stay (6 months) at Universidad Autónoma de Baja California (UABC), Mexico (Feb 2026 to Jun 2026).",
       ],
     },
   ],
@@ -78,7 +78,7 @@ export const cvData: CvData = {
       title: "Undergraduate Research Project (Final Degree Project)",
       institution: "Universidad Autónoma de Baja California (UABC)",
       location: "Mexico",
-      period: "Feb 2025 to Jun 2026",
+      period: "Feb 2026 to Jun 2026",
       bullets: [
         "Isolated and molecularly identified Bacillus cereus strains from complex matrices (heavy-metal mining waste), combining environmental microbiology with molecular identification techniques.",
         "Performed cell culture, analytical extraction and sample preparation under research-laboratory conditions.",
