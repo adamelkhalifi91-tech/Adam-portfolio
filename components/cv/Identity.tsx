@@ -1,6 +1,7 @@
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { cvData } from "@/lib/cv-data";
+import { contactHref } from "@/lib/contact";
 
 export function Identity() {
   const { identity } = cvData;
@@ -26,7 +27,7 @@ export function Identity() {
       </p>
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
         <span className="text-ink-muted">{identity.location}</span>
-        <ArrowLink href={`mailto:${identity.email}`} external className="text-sm">
+        <ArrowLink href={contactHref} external className="text-sm">
           {identity.email}
         </ArrowLink>
         {identity.linkedin && (

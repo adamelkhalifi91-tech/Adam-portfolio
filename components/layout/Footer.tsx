@@ -1,6 +1,7 @@
 import { Container } from "./Container";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { cvData } from "@/lib/cv-data";
+import { contactHref } from "@/lib/contact";
 
 export function Footer() {
   const { identity } = cvData;
@@ -10,7 +11,7 @@ export function Footer() {
     identity.linkedin
       ? { label: "LinkedIn", href: identity.linkedin, external: true }
       : null,
-    { label: "Email", href: `mailto:${identity.email}`, external: true },
+    { label: "Email", href: contactHref, external: true },
   ].filter(
     (item): item is { label: string; href: string; external: boolean } =>
       item !== null,

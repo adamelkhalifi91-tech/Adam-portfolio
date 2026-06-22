@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { aboutCopy } from "@/content/about";
-import { cvData } from "@/lib/cv-data";
+import { contactHref } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "About",
@@ -34,7 +34,7 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-12 text-base">
-            <ArrowLink href={`mailto:${cvData.identity.email}`} external>
+            <ArrowLink href={contactHref} external>
               {aboutCopy.contactLabel}
             </ArrowLink>
           </p>

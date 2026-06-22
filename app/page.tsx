@@ -4,7 +4,7 @@ import { Hero } from "@/components/hero/Hero";
 import { ToolCard } from "@/components/tools/ToolCard";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { heroCopy } from "@/content/hero";
-import { cvData } from "@/lib/cv-data";
+import { contactHref } from "@/lib/contact";
 import { tools } from "@/lib/tools";
 
 export default function HomePage() {
@@ -48,7 +48,7 @@ export default function HomePage() {
             {heroCopy.closingTitle}
           </p>
           <p className="mt-10 text-base">
-            <ArrowLink href={`mailto:${cvData.identity.email}`} external>
+            <ArrowLink href={contactHref} external>
               {heroCopy.contactLabel}
             </ArrowLink>
           </p>
