@@ -3,10 +3,8 @@ import { cvData } from "@/lib/cv-data";
 export const contactEmail = cvData.identity.email;
 
 /**
- * Opens Gmail's compose window with the recipient pre-filled, instead of the
- * OS default mail client. Visitors not signed into Gmail are sent through the
- * Google login first. Use with an external link so it opens in a new tab.
+ * Standard mailto link. Opens whichever mail client the visitor uses (Gmail,
+ * Outlook, Apple Mail, mobile, ...) with the recipient pre-filled, with no
+ * dependency on being signed into any webmail.
  */
-export const contactHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-  contactEmail,
-)}`;
+export const contactHref = `mailto:${contactEmail}`;

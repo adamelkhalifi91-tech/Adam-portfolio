@@ -26,8 +26,16 @@ export function ArrowLink({ href, children, external, className }: ArrowLinkProp
   );
 
   if (external) {
+    // Only open a new tab for web URLs; mailto/tel should hand off to the
+    // device's app without leaving an empty blank tab behind.
+    const isWebUrl = /^https?:/i.test(href);
     return (
-      <a href={href} target="_blank" rel="noreferrer noopener" className={classes}>
+      <a
+        href={href}
+        target={isWebUrl ? "_blank" : undefined}
+        rel={isWebUrl ? "noreferrer noopener" : undefined}
+        className={classes}
+      >
         {content}
       </a>
     );
