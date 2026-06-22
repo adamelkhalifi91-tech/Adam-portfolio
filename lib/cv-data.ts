@@ -78,7 +78,7 @@ export const cvData: CvData = {
       title: "Undergraduate Research Project (Final Degree Project)",
       institution: "Universidad Autónoma de Baja California (UABC)",
       location: "Mexico",
-      period: "Sep 2025 to Mar 2026",
+      period: "Feb 2025 to Jun 2026",
       bullets: [
         "Isolated and molecularly identified Bacillus cereus strains from complex matrices (heavy-metal mining waste), combining environmental microbiology with molecular identification techniques.",
         "Performed cell culture, analytical extraction and sample preparation under research-laboratory conditions.",
